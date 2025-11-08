@@ -48,7 +48,7 @@ export default function CTA() {
                     </form>
 
                     <div className="mt-4 text-sm text-muted-foreground">
-                        No credit card required
+                        No credit card required. (We will get back to you within 24 hours.)
                     </div>
                 </motion.div>
             </div>

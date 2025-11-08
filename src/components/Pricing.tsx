@@ -21,7 +21,7 @@ const plans = [
         name: "Professional",
         price: "$49",
         description: "For growing teams",
-        special_discount: "$19 first month",
+        special_discount: "($19 first month)",
         features: [
             "Unlimited documents",
             "100GB storage",
@@ -86,14 +86,16 @@ export default function Pricing() {
                                             <span className="text-xs text-muted-foreground">/month</span>
                                         )}
                                     </div>
-                                    <p className="mt-1 text-md">*{plan.special_discount}</p>
+                                    {plan.special_discount && (
+                                        <p className="mt-1 font-thin text-sm">{plan.special_discount}</p>
+                                    )}
 
                                     <Button
                                         className="w-full rounded-xl"
                                         variant={plan.popular ? "default" : "outline"}
                                         size="lg"
                                     >
-                                        {plan.price === "Custom" ? "Contact Sales" : "Get Started"}
+                                        <a href="#contact">{plan.price === "Custom" ? "Contact Sales" : "Get Started"}</a>
                                     </Button>
 
                                     <div className="space-y-3 pt-4">

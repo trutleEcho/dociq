@@ -3,6 +3,7 @@
 import { Github, Twitter, Linkedin } from "lucide-react"
 import React from "react"
 import Image from "next/image";
+import pkg from "../../package.json";
 
 const navigation = [
     { name: "Features", href: "#features" },
@@ -149,7 +150,7 @@ export default function Footer() {
                     </div>
 
                     <div className="mt-8 text-center text-sm text-muted-foreground">
-                        © {new Date().getFullYear()} DocsIQ. All rights reserved.
+                        © {new Date().getFullYear()} DocsIQ. All rights reserved. (v.{pkg.version})
                     </div>
                 </div>
             </div>

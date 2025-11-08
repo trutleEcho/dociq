@@ -55,13 +55,17 @@ export default function Hero() {
 
                         {/* Minimal CTAs */}
                         <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
-                            <Button size="lg" className="gap-2 rounded-xl">
-                                Get Started
-                                <ArrowRight className="h-5 w-5" />
-                            </Button>
-                            <Button size="lg" variant="ghost" className="rounded-xl border border-border/60 hover:bg-background/50">
-                                Book a Demo
-                            </Button>
+                           <a href="#contact">
+                               <Button size="lg" className="gap-2 rounded-xl">
+                                   Get Started
+                                   <ArrowRight className="h-5 w-5" />
+                               </Button>
+                           </a>
+                            <a href="#contact">
+                               <Button size="lg" variant="ghost" className="rounded-xl border border-border/60 hover:bg-background/50">
+                                   Book a Demo
+                               </Button>
+                           </a>
                         </div>
 
                         {/* Tiny descriptor pills for clarity without visual noise */}
