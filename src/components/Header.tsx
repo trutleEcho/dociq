@@ -6,6 +6,7 @@ import { useState } from "react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import React from "react"
 import Image from "next/image";
+import Link from "next/link";
 
 const navigation = [
     { name: "Features", href: "#features" },
@@ -22,7 +23,9 @@ export default function Header() {
             <nav className="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
                 {/* Logo */}
                 <div className="flex items-center gap-2">
-                    <Image src="/banner1.png" alt="DocsIQ Logo" width={200} height={50} />
+                    <Link href="/">
+                        <Image src="/banner1.png" alt="DocsIQ Logo" width={200} height={50} />
+                    </Link>
                 </div>
 
                 {/* Desktop Navigation */}
@@ -41,7 +44,7 @@ export default function Header() {
                 {/* Desktop CTA */}
                 <div className="hidden items-center gap-4 md:flex">
                     {/*<Button variant="ghost">Sign In</Button>*/}
-                    <a className="rounded-xl bg-primary p-5 cursor-pointer" href="#contact" >Start Free Trial</a>
+                    <a className="rounded-xl bg-primary p-5 cursor-pointer" href="/book-demo" >Start Free Trial</a>
                 </div>
 
                 {/* Mobile Menu */}
@@ -64,8 +67,10 @@ export default function Header() {
                                 </a>
                             ))}
                             <div className="mt-6 flex flex-col gap-3">
-                                <Button variant="outline" className="w-full">Sign In</Button>
-                                <Button className="w-full">Start Free Trial</Button>
+                                {/*<Button variant="outline" className="w-full">Sign In</Button>*/}
+                                <Link href="/book-demo">
+                                    <Button className="w-full">Start Free Trial</Button>
+                                </Link>
                             </div>
                         </div>
                     </SheetContent>
